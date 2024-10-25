@@ -33,6 +33,3 @@ Système de Défense Galactique est un jeu de stratégie spatial interactif insp
 1. Clonez ce dépôt
 2. Ouvrez `index.html` dans votre navigateur
 
-## Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à forker le projet, créer une branche, et soumettre une pull request.
