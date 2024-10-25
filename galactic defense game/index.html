@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Défense Galactique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-blue-300 flex items-center justify-center min-h-screen font-['Orbitron']">
+    <div id="stars"></div>
+    <div id="cockpit">
+        <div id="game-container" class="text-center z-10">
+            <h1 class="text-3xl mb-4 text-blue-400 font-bold">Système de Défense Galactique</h1>
+            <div id="radar-frame">
+                <div id="space-grid" class="mb-4"></div>
+            </div>
+            <div id="control-panel" class="flex justify-between items-center mb-4">
+                <div id="game-info" class="text-left">
+                    <p>Menaces d&eacute;tect&eacute;es: <span id="ships-left" class="text-red-400">${this.space.ships.length}</span></p>
+                    <p>Tirs de plasma: <span id="shots-fired" class="text-green-400">${this.shotsFired}</span></p>
+                </div>
+                <button id="start-game" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full text-sm transition-all duration-300 transform hover:scale-105">
+                    Initialiser Défense
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="end-game-menu" class="hidden">
+        <div class="menu-content">
+            <h2 id="end-game-title" class="text-2xl mb-4"></h2>
+            <p id="end-game-message" class="mb-4"></p>
+            <button id="close-menu" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full text-sm transition-all duration-300 transform hover:scale-105">
+                Fermer
+            </button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
